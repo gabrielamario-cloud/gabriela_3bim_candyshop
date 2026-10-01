@@ -1,1 +1,1 @@
-# gabriela_3bim_candyshop
+Projeto exemplo com menu e 2 Cruds (produto e unidade de medida)

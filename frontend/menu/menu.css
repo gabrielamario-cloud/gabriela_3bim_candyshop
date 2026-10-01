@@ -1,0 +1,121 @@
+/* --- Reset Básico --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Variáveis de Cores --- */
+:root {
+    --cor-primaria: #f6b26b;
+    --cor-secundaria: #f8c98c;
+    --cor-secundaria-hover: #ee9f52;
+    --cor-fundo: #fff7f0;
+    --cor-fundo-escuro: #fde7d2;
+    --cor-texto: #6b3d12;
+    --cor-borda: #f7d7b5;
+    --cor-branco: #ffffff;
+    --cor-sombra: rgba(143, 83, 26, 0.14);
+}
+
+/* --- Estrutura Geral --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, var(--cor-fundo) 0%, #fdf0e3 100%);
+    color: var(--cor-texto);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Header Semântico --- */
+header {
+    background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
+    color: var(--cor-branco);
+    padding: 2.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 6px 18px var(--cor-sombra);
+}
+
+header h1 {
+    margin-bottom: 0.6rem;
+    font-size: 2.6rem;
+    letter-spacing: 0.08rem;
+}
+
+header p {
+    font-size: 1rem;
+    opacity: 0.95;
+}
+
+/* --- Main (Conteúdo Central) --- */
+main.container-master {
+    flex: 1;
+    width: 100%;
+    max-width: 980px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+/* --- Grid de Opções --- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.card-menu {
+    background: linear-gradient(180deg, #f7c48d 0%, #f2a65a 100%);
+    padding: 2.2rem 1.5rem;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px var(--cor-sombra);
+    text-decoration: none;
+    color: var(--cor-branco);
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.45);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-menu:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 28px rgba(121, 61, 0, 0.2);
+    filter: brightness(1.03);
+}
+
+.card-icon {
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.18);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.52);
+}
+
+.card-menu h2 {
+    font-size: 1.5rem;
+    color: var(--cor-branco);
+    margin-bottom: 0.6rem;
+}
+
+.card-menu p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.5;
+}
+
+/* --- Footer Semântico --- */
+footer {
+    background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-secundaria-hover) 100%);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
